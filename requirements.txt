@@ -4,7 +4,7 @@ uvicorn[standard]
 whisper_ctranslate2
 opencc
 prometheus-fastapi-instrumentator
-git+https://github.com/heimoshuiyu/faster-whisper@a759f5f48f5ef5b79461a6461966eafe9df088a9
+git+https://github.com/SYSTRAN/faster-whisper@ed9a06cd89a93e47838f564998a6c09b655d7f43
 pydub
 aiohttp
 wyoming

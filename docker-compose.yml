@@ -1,0 +1,23 @@
+services:
+  whisper-fastapi:
+    build: .
+    image: whisper-fastapi-local:latest
+    container_name: whisper-fastapi
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "5000:5000"
+    volumes:
+      - hf-cache:/root/.cache/huggingface
+    command: ["--model", "Infomaniak-AI/faster-whisper-large-v3-turbo"]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+volumes:
+  hf-cache:

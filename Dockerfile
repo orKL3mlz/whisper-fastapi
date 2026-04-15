@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.3.2-cudnn9-runtime-ubuntu22.04
+FROM nvidia/cuda:12.9.1-cudnn-runtime-ubuntu22.04
 
 RUN apt-get update && \
     apt-get install -y ffmpeg python3 python3-pip git && \
@@ -15,5 +15,5 @@ COPY . .
 
 EXPOSE 5000
 
-# 启动 whisper_fastapi.py
+# launch whisper_fastapi.py
 ENTRYPOINT ["python3", "whisper_fastapi.py"]
