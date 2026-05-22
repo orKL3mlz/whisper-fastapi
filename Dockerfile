@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.9.1-cudnn-runtime-ubuntu22.04
+FROM nvidia/cuda:13.1.2-cudnn-runtime-ubuntu24.04
 
 RUN apt-get update && \
     apt-get install -y ffmpeg python3 python3-pip git && \
